@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>接口:增加规则信息</title>
+    <script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/func.common.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+    <script type="text/javascript" src="js/jquery.md5.js">//$.md5()</script>
+    <script type="text/javascript" src="js/jquery.base64.js">//$.base64.encode()</script>
+    <script src="js/c.js" type="text/javascript"></script>
+    <script src="js/urchin.js" type="text/javascript"></script>
+    <link href="css/s.css" type="text/css" rel="stylesheet">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+
+        $(function(){
+            $('#btn').click(function(){
+
+                var method = $('input[name="method"]').val();
+                var url = $('input[name="url"]').val();
+                var rule_name = $('input[name="rule_name"]').val();
+                var click_b = $('input[name="click_b"]').val();
+                var click_e = $('input[name="click_e"]').val();
+                var title_b = $('input[name="title_b"]').val();
+                var title_e = $('input[name="title_e"]').val();
+                var author_b = $('input[name="author_b"]').val();
+                var author_e = $('input[name="author_e"]').val();
+                var content_b = $('input[name="content_b"]').val();
+                var content_e = $('input[name="content_e"]').val();
+                var pubtime_b = $('input[name="pubtime_b"]').val();
+                var pubtime_e = $('input[name="pubtime_e"]').val();
+                var media_b = $('input[name="media_b"]').val();
+                var media_e = $('input[name="media_e"]').val();
+                var channel_b = $('input[name="channel_b"]').val();
+                var channel_e = $('input[name="channel_e"]').val();
+                var comment_b = $('input[name="comment_b"]').val();
+                var comment_e = $('input[name="comment_e"]').val();
+                var source = $('input[name="source"]').val();
+                var timestamp = $('input[name="timestamp"]').val();
+                // var source = $('#source').val();
+                var secret = "shuangyi_android";
+//                if(source==3)
+//                {
+//                    secret = "shuangyi_ios";
+//                }
+                var sign = $.md5(method+timestamp+source+secret);
+                $('#sign').val(sign);
+                $.ajax({
+                    type         : 'POST',
+                    data         : {
+                        method :method,
+                        rule_name   :rule_name,
+                        url : url,
+                        click_b : click_b,
+                        click_e : click_e,
+                        title_b : title_b,
+                        title_e : title_e,
+                        author_b : author_b,
+                        author_e : author_e,
+                        content_b : content_b,
+                        content_e : content_e,
+                        pubtime_b : pubtime_b,
+                        pubtime_e : pubtime_e,
+                        media_b : media_b,
+                        media_e : media_e,
+                        channel_b : channel_b,
+                        channel_e : channel_e,
+                        comment_b : comment_b,
+                        comment_e : comment_e,
+                        source : source,
+                        timestamp:timestamp,
+                        // source   : source,
+                        sign   : sign
+                    },
+                    url : "../api.php",
+                    beforeSend :  function(data){
+                        $('#Canvas').html('<p>请求处理中...</p>');
+                    },
+                    success :     function(data){
+                        Process(data);
+                    },
+                    error :       function(request, errtext, e){
+                        $('#Canvas').html('<p><b>发生错误</b></p><p>'+request.status+'<br/>'+errtext+'</p>');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="head"><p>接口111：获取首页轮播图</p></div>
+<!--<div style="background:#C0C0C0">-->
+<!--<p style="margin-left:20px">部分字段说明:</p>-->
+<!--<p style="margin-left:20px">type: 1链接,2商品,3门店</p>-->
+<!--<p style="margin-left:20px">content: 链接url,商品id,门店id</p>-->
+<!--</div>-->
+<div id="content">
+    <div id="left">
+        <div class ="message"><p>接口返回：</p></div>
+        <div id="Canvas" class="Canvas"></div>
+    </div>
+    <div id="right">
+        <div class ="message"><p>请求数据：</p></div>
+        <form>
+            <p>
+                <span>method:</span>
+                <input type="text" class="input-text"  name="method" value="add_parse_rule"/>
+            </p>
+            <p>
+                <span>url:</span>
+                <input type="text" class="input-text"  name="url" value="http://www.sohu.com/a/*"/>
+            </p>
+            <p>
+                <span>rule_name:</span>
+                <input type="text" class="input-text"  name="rule_name" value="搜狐汽车投诉"/>
+            </p>
+            <p>
+                <span>click_b:</span>
+                <input type="text" class="input-text"  name="click_b" value=""/>
+            </p>
+            <p>
+                <span>click_e:</span>
+                <input type="text" class="input-text"  name="click_e" value=")</div>"/>
+            </p>
+            <p>
+                <span>title_b:</span>
+                <input type="text" class="input-text"  name="title_b" value="<title>"/>
+            </p>
+            <p>
+                <span>title_e:</span>
+                <input type="text" class="input-text"  name="title_e" value=""/>
+            </p>
+            <p>
+                <span>author_b:</span>
+                <input type="text" class="input-text"  name="author_b" value=""/>
+            </p>
+            <p>
+                <span>author_e:</span>
+                <input type="text" class="input-text"  name="author_e" value="</div>"/>
+            </p>
+
+            <p>
+                <span>content_b:</span>
+                <input type="text" class="input-text"  name="content_b" value=""/>
+            </p>
+
+            <p>
+                <span>content_e:</span>
+                <input type="text" class="input-text"  name="content_e" value=""/>
+            </p>
+
+            <p>
+                <span>pubtime_b:</span>
+                <input type="text" class="input-text"  name="pubtime_b" value=""/>
+            </p>
+
+            <p>
+                <span>pubtime_e:</span>
+                <input type="text" class="input-text"  name="pubtime_e" value="</span>"/>
+            </p>
+            <p>
+                <span>media_b:</span>
+                <input type="text" class="input-text"  name="media_b" value=""/>
+            </p>
+            <p>
+                <span>media_e:</span>
+                <input type="text" class="input-text"  name="media_e" value=""/>
+            </p>
+            <p>
+                <span>channel_b:</span>
+                <input type="text" class="input-text"  name="channel_b" value=""/>
+            </p>
+            <p>
+                <span>channel_e:</span>
+                <input type="text" class="input-text"  name="channel_e" value="</div>"/>
+            </p>
+            <p>
+                <span>channel_b:</span>
+                <input type="text" class="input-text"  name="channel_b" value=""/>
+            </p>
+            <p>
+                <span>comment_b:</span>
+                <input type="text" class="input-text"  name="comment_b" value=""/>
+            </p>
+            <p>
+                <span>comment_e:</span>
+                <input type="text" class="input-text"  name="comment_e" value=""/>
+            </p>
+
+            <p>
+                <span>source:</span>
+                <input type="text" class="input-text"  name="source" value="1"/>
+            </p>
+            <p>
+                <span>timestamp:</span>
+                <input type="text" class="input-text"  name="timestamp" value="11111111"/>
+            </p>
+
+            <p><span>校验码：</span><input type="text" class="input-text" id="sign" readonly/></p>
+            <p><button class="button success small" id="btn" type="button">发送请求</button></p>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

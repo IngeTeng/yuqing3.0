@@ -1,0 +1,12 @@
+{
+    "require": {
+      "andreskrey/readability.php": "^1.2",
+      "ext-json": "*"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

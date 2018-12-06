@@ -1,0 +1,334 @@
+﻿
+.listintor1{
+	border:0;
+}
+.header1{
+	background-image:url('../images/common/listheader1.gif');
+	background-repeat:repeat-x;
+	height:25px;
+}
+.header1 img{
+	margin:9px 15px 0 13px;
+}
+.header2{
+	background-image:url('../images/common/listheader2.gif');
+	background-repeat:repeat-x;
+	height:27px;
+	line-height:27px;
+}
+.header2 span{
+	font-weight:bold;
+	margin-left:20px;
+}
+.header2 span.sp1{
+	margin-left:0;
+}
+.header3{
+	float:right;
+	margin-top:-23px;
+	margin-right:10px;
+}
+.header3 a{
+	color:#000;
+}
+.content{
+	margin:15px 11px 0 6px;
+}
+.formlist   table{
+	border:1px solid #C9C9C9;
+	width:100%;
+	border-collapse:collapse;
+	margin-bottom:28px;
+}
+.fromcontent{
+	margin-left:15px;
+}
+.fromcontent p{
+	margin-top:14px;
+}
+.fromcontent p.p1{
+	color:red;
+}
+.fromcontent p.p2{
+	font-weight:bold;
+}
+.fromcontent p span.start{
+	color:#FF0000;
+}
+.fromcontent p span.sp2{
+	color:#000;
+	font-weight:normal;
+}
+.fromcontent p.txt{
+	margin-left:59px;
+}
+.fromcontent p img{
+	position:relative;
+	top:4px;
+}
+.fromcontent .btn{
+	margin-left:2px;
+	margin-top:20px;
+}
+.fromcontent p input.in1{
+	background-color:#EDF3FB;
+	border:1px solid #B9CCDD;
+	width:184px;
+	height:17px;
+}
+.fromcontent p input.in2{
+	width:450px;
+}
+.fromcontent p input.in3{
+	position:relative;
+	top:5px;
+}
+.fromcontent .question{
+	border:1px solid #497FC7;
+	padding:10px;
+	margin-right:20px;
+	margin-top:20px;
+}
+.fromcontent .question p.p3{
+	width:49%;
+	float:left;
+	margin-bottom:10px;
+}
+.fromcontent .question p.p4{
+	float:right;
+	margin-right:20px;
+}
+.fromcontent textarea{
+	width:320px;
+	height:100px;
+}
+.baseintor{
+	margin:8px 0 18px 5px;
+}
+.baseintor .basetitle1{
+	background-color:#D6E1F4;
+	height:26px;
+}
+.baseintor .basetitle1 img{
+	margin-left:8px;
+}
+.baseintor .basetitle1 span{
+	line-height:26px;
+	font-weight:bold;
+	margin-left:10px;
+}
+.baseintor .basetitle2{
+	margin-top:2px;
+	height:26px;
+	background-color:#E6EDF8;
+	line-height:26px;
+}
+.baseintor .basetitle2 span{
+	margin-left:15px;
+}
+.baseintor .basetitle2 span a{
+	color:#000;
+}
+.baseintor .basetitle2 span.size{
+	margin-left:493px;
+}
+.baseintor .basetitle3{
+	margin-top:2px;
+	margin-left:2px;
+	line-height:26px;
+	height:26px;
+	background-color:#EDF2FA;
+}
+.baseintor .basetitle3 span{
+	margin-left:17px;
+}
+.bgintor{
+	margin-left:2px;
+}
+.tit1{
+	height:25px
+}
+.tit1 ul{
+	list-style-type:none;
+}
+.tit1 ul li{
+	float:left;
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0b72b7;
+	width:86px;
+	height:25px;
+	font-weight:bold;
+}
+.tit1 ul li.l1{
+	background-color: #0b72b7;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0b72b7;
+	font-weight:normal;
+}
+.tit1 ul li a{
+	display:block;
+	text-align:center;
+	padding-top:5px;
+	color:#000;
+}
+.tit1 ul li.l1 a{
+	color:#BEEBFF;
+}
+.bgintor2{
+	border-left:1px solid #40656F;
+	border-right:1px solid #40656F;
+	border-bottom:1px solid #40656F;
+}
+.bgvline{
+	background-image:url('../images/common/bghline.gif');
+	background-repeat:repeat-x;
+	height:14px;
+}
+.bgtitle{
+	background-image:url('../images/common/bgtitle2.gif');
+	background-repeat:repeat-x;
+	height:28px;
+	border:1px solid #C1DCF1;
+	margin-left:6px;
+	margin-right:2px;
+}
+.bgtitle span img{
+	margin:3px 9px 0 10px;
+}
+.bgtitle span{
+	color:#396486;
+}
+.bgtitle span.sp1{
+	position:relative;
+	left:70%;
+	top:2px;
+}
+.bgintor3{
+	margin-top:28px;
+}
+.bgintor3 .left{
+	width:49.7%;
+	float:left;
+}
+ .title1{
+	background-image:url('../images/common/leftbg1.gif');
+	background-repeat:repeat-x;
+	width:165px;
+	height:26px;
+	position:relative;
+	top:-26px;
+}
+ .title1 span.s1{
+	line-height:26px;
+	margin-left:38px;
+	font-weight:bold;
+}
+ .title2{
+	background-image:url('../images/common/leftbg2.gif');
+	background-repeat:repeat-x;
+	height:26px;
+	width:97%;
+}
+.bgintor3 .bgintor4{
+	margin-left:29px;
+}
+.bgintor3 .bgintor4 p{
+	line-height:24px;
+}
+.bgintor3 .bgintor4 p a{
+	color:#000;
+}
+.bgintor3 .bgintor4 p a:hover{
+	text-decoration:underline;
+	color:#FF6600;
+}
+#main{
+	clear:both;
+}
+.bgintor5{
+	margin-top:19px;
+}
+.bgintor5 .title2{
+	width:100%;
+}
+.bgintor5 table{
+	border-top:1px solid #E5E5E5;
+	margin-left:5px;
+	margin-bottom:84px;
+	border-left:1px solid #9E9E9E;
+	border-right:1px solid #9E9E9E;
+	border-bottom:1px solid #9E9E9E;
+}
+.bgintor5 table tr td{
+	height:28px;
+	border-bottom:1px solid #E5E5E5;
+}
+.bgintor5 table tr td.td1{
+	padding-left:33px;
+}
+.bgintor5 table tr.tr1{
+	height:10px;
+}
+#switchpic{
+	width: 6px;
+	cursor:pointer;
+	clear: both;
+	vertical-align: bottom;
+	margin-top: 220px;
+}
+/*申请人详细信息样式*/
+.formlist   fieldset{
+	padding:20px 10px;
+	margin-top:10px;
+	
+}
+.formlist   fieldset legend{
+	font-size:16px;
+	color:blue;	
+}
+.listinor .formlist   fieldset .tr{
+	padding-top:5px;
+	padding-left:5px;
+}
+.formlist   fieldset .tr .td1{
+	float:left;
+	padding-left:10px;
+}
+.formlist   fieldset .tr .td2{
+	float:left;
+	padding-right:20px;
+}
+.formlist   fieldset .tr .td{
+	float:left;
+	padding-right:20px;
+	color:#2F6D84;
+}
+.formlist   fieldset .tr .all{
+	padding:10px;
+	color:#2F6D84;
+}
+.formlist   fieldset .tr .td a{
+	color:#2F6D84;
+}
+.formlist   fieldset .tr .td a:hover{
+	color:#15304E;
+}
+.formlist   fieldset .tr .anwser{
+	line-height:30px;
+}
+
+/*分页样式*/
+.formlist   .page{
+	padding-bottom:20px;
+}
+.formlist   .page .pagebefore{
+	width:200px;
+	float:left;
+}
+.formlist   .page .pageafter{
+	float:right;
+	margin-top:-6px;
+}

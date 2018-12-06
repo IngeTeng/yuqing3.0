@@ -1,0 +1,78 @@
+<html xmlns="http://blog.csdn.net/sinat_35861727?viewmode=contents">
+ 
+<head>
+	<meta http-equiv = "Content-Type" content = "text/html;charset = utf8">
+	<meta name = "description" content = "提交表单">
+	<title>API接口请求表单</title>
+</head>
+	<style type="text/css">
+		.key1{
+			width:100px;
+		}
+		.value1{
+			width:230px;
+			margin:0 0 0 10px;
+		}
+		.main{
+			margin:0 auto;
+			width:450px;
+			height:auto;
+			background:lightgray;
+			padding:40px 40px;
+		}
+		.refer{
+			width:100px;
+			height:24px;
+		}
+		.url{
+			width:350px;
+		}
+	</style>
+<body>
+ 
+<div class="main">
+
+	<p>接口返回全部site信息</p>
+	<form method="POST" action="getSiteInfoById.php" target="_blank">
+		
+		<p style="text-align:center;"><input class="refer" type="submit" value="提交"></p>
+	</form>
+
+	<p>插入task表接口</p>
+	<form method="POST" action="InputSiteInfo.php" target="_blank">
+		<p>siteid: <input class="value1" type="text" name="siteid" value="1"></p>
+		<p>cur_depth: <input class="value2" type="text" name="cur_depth" value="3"></p>
+		<p>url: <input class="value3" type="text" name="url" value="https://www.baidu.com"></p>
+		
+		<p style="text-align:center;"><input class="refer" type="submit" value="提交"></p>
+	</form>
+
+	<a>接口查询task表并且删除</a>
+	<form method="POST" action="getInfoByIdDel.php" target="_blank">
+		<!-- <p>id： <input class="value1" type="text" name="id" value="1"></p> -->
+		
+		<p style="text-align:center;"><input class="refer" type="submit" value="提交"></p>
+	</form>
+
+	<a>接口spider_center</a>
+	<form method="POST" action="http://47.94.0.230/spider_center/api/sipder.php" target="_blank">
+		<p>url： <input class="value1" type="text" name="url" value="http://auto.sina.com.cn/newcar/x/2018-10-31/detail-ifxeuwws9983494.shtml"></p>
+		
+		<p style="text-align:center;"><input class="refer" type="submit" value="提交"></p>
+	</form>
+
+
+	<a>接口content_center</a>
+	<form method="POST" action="http://47.94.0.230/content_center/api/parse.php" target="_blank">
+		<p>url: <input class="value1" type="text" name="collect_url" value="http://bbs.tianya.cn/post-me-226447-1.shtml"></p>
+
+		<!-- <p>collect_download_url <input class="value1" type="text" name="collect_download_url" value="http://localhost:8888/api/results/zADhemQj2z5bda9ad723224"></p> -->
+		<p>collect_download_url <input class="value1" type="text" name="collect_download_url" value="http://47.92.209.195/yuqing/wii_spider/bbs_article/spider_result/56bd14897a113078c734cb6da12a2b17"></p>
+		
+		<p style="text-align:center;"><input class="refer" type="submit" value="提交"></p>
+	</form>
+</div>
+</body>
+ 
+ 
+</html>
